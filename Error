@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/emmab/MPL115A2.py", line 3, in <module>
+    sensor = Adafruit_MPL115A2.MPL115A2(busnum=1)
+AttributeError: module 'Adafruit_MPL115A2' has no attribute 'MPL115A2'
+>>> 
