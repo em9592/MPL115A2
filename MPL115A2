@@ -1,0 +1,17 @@
+import Adafruit_MPL115A2
+# Initialisez le capteur.
+sensor = Adafruit_MPL115A2.MPL115A2(busnum=1)
+
+
+# Récupérez les données de pression.
+pressure = sensor.read_pressure()
+
+# Affichez les données de pression.
+print('Pression = {0:0.2f} kPa'.format(pressure/1000))
+P0 = 101325#pression atmosphérique standard en pascal
+R=287.058  #constante des gazs parfaits en J/(kg*K)
+Tk=273.15+ temperature #Température en Kelvin
+P=pressure;
+rho = (P / (R * Tk)) #densité de l'air kg/m^3
+V=math.sqrt(2*(P0-P)/rho) #vitesse du vent en m/s
+print (V)
